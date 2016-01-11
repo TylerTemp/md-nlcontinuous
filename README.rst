@@ -34,10 +34,10 @@ in Chinese.
 
     >>> s = '中文\n中文'
     >>> markdown.markdown(s)
-    <p>中文\n中文</p>
+    '<p>中文\n中文</p>'
     >>> markdown.markdown(s, extensions=[nlcontinuous.makeExtension()])
-    <p>中文中文</p>
+    '<p>中文中文</p>'
     >>> markdown.markdown('中文\nEnglish', extensions=[nlcontinuous.makeExtension()])
-    <p>中文\nEnglish</p>
+    '<p>中文\nEnglish</p>'
     >>> markdown.markdown('嗯。\n就酱', extensions=[nlcontinuous.makeExtension()])  # zh-punctuation
-    <p>嗯。就酱</p>
+    '<p>嗯。就酱</p>'
