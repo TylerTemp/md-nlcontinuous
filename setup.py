@@ -11,6 +11,7 @@ with open(os.path.join(os.path.dirname(__file__), 'README.rst'),
 
 setup(
     name='nlcontinuous',
+    py_modules=['nlcontinuous'],
     package_data={
         '': [
             'README.rst',
