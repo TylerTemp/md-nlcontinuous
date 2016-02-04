@@ -4,7 +4,7 @@ from markdown import Extension
 from markdown.inlinepatterns import Pattern
 import re
 
-__version__ = '0.0.2'
+__version__ = '0.0.3'
 __author__ = 'TylerTemp(tylertempdev@gmail.com)'
 
 
@@ -18,7 +18,7 @@ class NLContinuousPattern(Pattern):
         prev = m.group(1)
         next = m.group(2)
         zh_re = self.zh_re
-        if zh_re.match(prev[-1]) and zh_re.match(next[0]):
+        if prev and next and zh_re.match(prev[-1]) and zh_re.match(next[0]):
             return ''
         return '\n'
 
